@@ -1,5 +1,5 @@
 # Ex05 Image Carousel
-## Date:
+## Date: 25-06-26
 
 ## AIM
 To create a Image Carousel using React 
@@ -40,8 +40,41 @@ Clean up the interval when the component unmounts using clearInterval to prevent
 
 ## PROGRAM
 
+```
+import { useState } from "react";
+
+function Car() {
+  const images = [
+    "https://picsum.photos/300/200?1",
+    "https://picsum.photos/300/200?2",
+    "https://picsum.photos/300/200?3"
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div>
+      <img src={images[index]} alt="img" width="300" />
+
+      <br />
+
+      <button onClick={() => setIndex(index - 1)}>
+        Prev
+      </button>
+
+      <button onClick={() => setIndex(index + 1)}>
+        Next
+      </button>
+    </div>
+  );
+}
+
+export default Car;
+
+```
 
 ## OUTPUT
+<img width="1486" height="943" alt="image" src="https://github.com/user-attachments/assets/f65fe6f2-5f0a-4ae4-96cf-88ad558ef46e" />
 
 
 ## RESULT
